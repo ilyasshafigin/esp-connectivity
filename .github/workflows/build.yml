@@ -1,0 +1,36 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  package-and-examples:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install PlatformIO
+        run: pip install platformio intelhex
+      - name: Validate package
+        run: pio pkg pack .
+      - name: Build Wi-Fi example (ESP8266)
+        working-directory: examples/wifi
+        run: pio run -e esp8266
+      - name: Build Wi-Fi example (ESP32)
+        working-directory: examples/wifi
+        run: pio run -e esp32
+      - name: Build OTA example (ESP8266)
+        working-directory: examples/ota
+        run: pio run -e esp8266
+      - name: Build OTA example (ESP32)
+        working-directory: examples/ota
+        run: pio run -e esp32
+      - name: Build MQTT example (ESP8266)
+        working-directory: examples/mqtt
+        run: pio run -e esp8266
+      - name: Build MQTT example (ESP32)
+        working-directory: examples/mqtt
+        run: pio run -e esp32

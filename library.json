@@ -1,0 +1,54 @@
+{
+  "name": "EspConnectivity",
+  "version": "0.1.0",
+  "description": "Arduino ESP8266/ESP32 Wi-Fi, OTA, MQTT lifecycle controllers and Home Assistant MQTT entities.",
+  "keywords": [
+    "wifi",
+    "ota",
+    "mqtt",
+    "home-assistant",
+    "esp8266",
+    "esp32"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilyasshafigin/espconnectivity.git"
+  },
+  "authors": [
+    {
+      "name": "Ilyas Shafigin"
+    }
+  ],
+  "license": "GPL-3.0-or-later AND Apache-2.0",
+  "frameworks": [
+    "arduino"
+  ],
+  "platforms": [
+    "espressif8266",
+    "espressif32"
+  ],
+  "headers": [
+    "WifiController.h",
+    "OtaController.h",
+    "MqttController.h",
+    "HaMqttEntities.h"
+  ],
+  "export": {
+    "exclude": [
+      ".pio",
+      ".pio/**",
+      "examples/**/.pio",
+      "examples/**/.pio/**",
+      "_examples",
+      "_examples/**",
+      "examples/**/_pio",
+      "examples/**/_pio/**",
+      "examples/**/__pio",
+      "examples/**/__pio/**",
+      "*.tar.gz"
+    ]
+  },
+  "dependencies": {
+    "hmueller01/PubSubClient3": "3.3.1"
+  }
+}

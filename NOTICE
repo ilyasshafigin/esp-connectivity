@@ -1,0 +1,17 @@
+EspConnectivity distribution notice
+
+This package combines distinct works with their original licensing terms.
+
+Original controller glue and extraction packaging:
+  Copyright (c) 2026 Ilyas Shafigin.
+  Licensed under GNU General Public License, version 3 or later.
+  See LICENSE.
+
+HaMqttEntities:
+  Derived from paulino/ha-mqtt-entities (baseline version 1.0.12).
+  Original copyright (c) Paulino Ruiz de Clavijo Vázquez <pruiz@us.es>.
+  Licensed under the Apache License, Version 2.0.
+  See LICENSES/Apache-2.0.txt and docs/ha-mqtt-entities.md.
+
+The HaMqttEntities version constants and its Apache-2.0 licensing are retained
+in src/mqtt/ha_entities/.
